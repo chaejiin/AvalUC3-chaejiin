@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo salário líquido</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Contador salário líquido</h1>
+
+        <form action="./pages/imposto.php" method="GET">
+            <label for="salario_usuario">Digite o valor da hora trabalhada</label>
+            <input type="number" id="salario_usuario" name="salario_usuario" required>
+
+            <label for="salario_mes">Digite o número de horas trabalhadas no mês</label>
+            <input type="number" id="salario_mes" name="salario_mes" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+
+    </main>
+</body>
+
+</html>

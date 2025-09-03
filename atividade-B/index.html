@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificar Número</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Qual operação matemática você deseja fazer?</h1>
+    <form action="./pages/operacoes.php" method="GET">
+      <label for="numero_usuario">Digite um número:</label>
+      <input type="number" id="numero_usuario" name="numero_usuario" placeholder="Ex: 22" required>
+      <p>Esta operação será realizada com os números de 1 a 10</p>
+      <label for="operacao_usuario">Digite 1 para Adição ou 2 para Subtração: </label>
+      <input type="number" id="operacao_usuario" name="operacao_usuario" required>
+      <button type="submit">Verificar</button>
+    </form>
+  </main>
+</body>
+</html>
