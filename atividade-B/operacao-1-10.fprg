@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tabuada Interativa"/>
+        <attribute name="authors" value="Gemini"/>
+        <attribute name="about" value="Recebe um n&#250;mero e uma opera&#231;&#227;o (adi&#231;&#227;o ou subtra&#231;&#227;o) e calcula o resultado com os n&#250;meros de 1 a 10."/>
+        <attribute name="saved" value="2025-09-06 04:06:50 "/>
+        <attribute name="created" value="R29vZ2xl;VW5rbm93bjsyMDI1LTA5LTA2OzAzOjUzOjEyIFBNOzE="/>
+        <attribute name="edited" value="R29vZ2xl;VW5rbm93bjsyMDI1LTA5LTA2OzAzOjU1OjEyIFBNOzE="/>
+        <attribute name="edited" value="bGVhbmQ7Q0hBRTsyMDI1LTA5LTA2OyIwNDowNjo1MCAiOzE7MjA5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroUsuario, operacaoUsuario, i, resultado" type="Integer" array="False" size=""/>
+            <output expression="&quot;Calculadora de Opera&#231;&#245;es de 1 a 10&quot;" newline="True"/>
+            <output expression="&quot;Digite um n&#250;mero qualquer:&quot;" newline="True"/>
+            <input variable="numeroUsuario"/>
+            <output expression="&quot;Escolha a opera&#231;&#227;o:&quot;" newline="True"/>
+            <output expression="&quot;Digite 1 para ADI&#199;&#195;O&quot;" newline="True"/>
+            <output expression="&quot;Digite 2 para SUBTRA&#199;&#195;O&quot;" newline="True"/>
+            <input variable="operacaoUsuario"/>
+            <if expression="operacaoUsuario == 1">
+                <then>
+                    <output expression="&quot;Resultados para Adi&#231;&#227;o com o n&#250;mero &quot; &amp; numeroUsuario &amp; &quot;:&quot;" newline="True"/>
+                    <for variable="i" start="1" end="10" direction="inc" step="1">
+                        <assign variable="resultado" expression="numeroUsuario + i"/>
+                        <output expression="numeroUsuario &amp; &quot; + &quot; &amp; i &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+                    </for>
+                </then>
+                <else>
+                    <if expression="operacaoUsuario == 2">
+                        <then>
+                            <output expression="&quot;Resultados para Subtra&#231;&#227;o com o n&#250;mero &quot; &amp; numeroUsuario &amp; &quot;:&quot;" newline="True"/>
+                            <for variable="i" start="1" end="10" direction="inc" step="1">
+                                <assign variable="resultado" expression="numeroUsuario - i"/>
+                                <output expression="numeroUsuario &amp; &quot; - &quot; &amp; i &amp; &quot; = &quot; &amp; resultado" newline="True"/>
+                            </for>
+                        </then>
+                        <else>
+                            <output expression="&quot;Erro: Opera&#231;&#227;o inv&#225;lida. Por favor, escolha 1 ou 2.&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

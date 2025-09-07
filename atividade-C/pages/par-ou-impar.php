@@ -13,12 +13,13 @@ Números ímpares: 2 -->
 $total_pares = 0;
 $total_impares = 0;
 $mensagem_final = '';
-$classe_css = 'erro'; // Define 'erro' como padrão
+$classe_css = 'erro'; 
 
 
-$num1 = filter_input(INPUT_GET, 'numero1', FILTER_VALIDATE_INT);
-$num2 = filter_input(INPUT_GET, 'numero2', FILTER_VALIDATE_INT);
-$num3 = filter_input(INPUT_GET, 'numero3', FILTER_VALIDATE_INT);
+// CORREÇÃO APLICADA AQUI
+$num1 = filter_input(INPUT_GET, 'num1', FILTER_VALIDATE_INT);
+$num2 = filter_input(INPUT_GET, 'num2', FILTER_VALIDATE_INT);
+$num3 = filter_input(INPUT_GET, 'num3', FILTER_VALIDATE_INT);
 
 
 if ($num1 !== false && $num2 !== false && $num3 !== false) {

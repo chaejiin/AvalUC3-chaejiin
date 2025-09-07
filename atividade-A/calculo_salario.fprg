@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="CalculoSalario"/>
+        <attribute name="authors" value="Gemini"/>
+        <attribute name="about" value="Calcula o sal&#225;rio l&#237;quido com base no valor da hora e horas trabalhadas, aplicando um imposto condicional."/>
+        <attribute name="saved" value="2025-09-06 11:44:55 "/>
+        <attribute name="created" value="R29vZ2xl;VW5rbm93bjsyMDI1LTA5LTA2OzAzOjQ1OjQ0IFBNOzE="/>
+        <attribute name="edited" value="R29vZ2xl;VW5rbm93bjsyMDI1LTA5LTA2OzAzOjUxOjEyIFBNOzE="/>
+        <attribute name="edited" value="bGVhbmQ7Q0hBRTsyMDI1LTA5LTA2OyIxMTo0NDo1NSAiOzE7MjA5Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorHora, horasTrabalhadas, salarioBruto, valorImposto, salarioLiquido" type="Real" array="False" size=""/>
+            <output expression="&quot;C&#225;lculo de Sal&#225;rio L&#237;quido&quot;" newline="True"/>
+            <output expression="&quot;Digite o valor que voc&#234; ganha por hora:&quot;" newline="True"/>
+            <input variable="valorHora"/>
+            <output expression="&quot;Digite o total de horas trabalhadas no m&#234;s:&quot;" newline="True"/>
+            <input variable="horasTrabalhadas"/>
+            <assign variable="salarioBruto" expression="valorHora * horasTrabalhadas"/>
+            <assign variable="valorImposto" expression="0"/>
+            <if expression="salarioBruto &gt; 2000">
+                <then>
+                    <assign variable="valorImposto" expression="salarioBruto * 0.05"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="salarioLiquido" expression="salarioBruto - valorImposto"/>
+            <output expression="&quot;RESULTADOS DO C&#193;LCULO:&quot;" newline="True"/>
+            <output expression="&quot;Sal&#225;rio Bruto: R$ &quot; &amp; salarioBruto" newline="True"/>
+            <output expression="&quot;Valor do Imposto (5% se Sal&#225;rio &gt; R$2000): R$ &quot; &amp; valorImposto" newline="True"/>
+            <output expression="&quot;Sal&#225;rio L&#237;quido Final: R$ &quot; &amp; salarioLiquido" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

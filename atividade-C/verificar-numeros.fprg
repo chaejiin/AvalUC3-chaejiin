@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="verificar-numeros"/>
+        <attribute name="authors" value=""/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-06 11:44:03 "/>
+        <attribute name="created" value="QXV0b3I7REVTS1RPUC1BM0dDRk1QOzIwMjUtMDktMDc7MTI6MzM6MzggQU07Mjg3Mw=="/>
+        <attribute name="edited" value="QXV0b3I7REVTS1RPUC1BM0dDRk1QOzIwMjUtMDktMDc7MTI6NDg6MDIgQU07MTszMDAx"/>
+        <attribute name="edited" value="bGVhbmQ7Q0hBRTsyMDI1LTA5LTA2OyIxMTo0NDowMyAiOzE7MjA4OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num1, num2, num3" type="Integer" array="False" size=""/>
+            <declare name="totalpares, totalimpares" type="Integer" array="False" size=""/>
+            <assign variable="totalpares" expression="0"/>
+            <assign variable="totalimpares" expression="0"/>
+            <output expression="&quot;Digite o primeiro n&#250;mero:&quot;" newline="True"/>
+            <input variable="num1"/>
+            <output expression="&quot;Digite o segundo n&#250;mero:&quot;" newline="True"/>
+            <input variable="num2"/>
+            <output expression="&quot;Digite o terceiro n&#250;mero:&quot;" newline="True"/>
+            <input variable="num3"/>
+            <if expression="num1 % 2 == 0">
+                <then>
+                    <assign variable="totalpares" expression="totalpares + 1"/>
+                </then>
+                <else>
+                    <assign variable="totalimpares" expression="totalimpares + 1"/>
+                </else>
+            </if>
+            <if expression="num2 % 2 == 0">
+                <then>
+                    <assign variable="totalpares" expression="totalpares + 1"/>
+                </then>
+                <else>
+                    <assign variable="totalimpares" expression="totalimpares + 1"/>
+                </else>
+            </if>
+            <if expression="num3 % 2 == 0">
+                <then>
+                    <assign variable="totalpares" expression="totalpares + 1"/>
+                </then>
+                <else>
+                    <assign variable="totalimpares" expression="totalimpares + 1"/>
+                </else>
+            </if>
+            <output expression="&quot;--- Resultado ---&quot;" newline="True"/>
+            <output expression="&quot;N&#250;meros digitados: &quot; &amp; num1 &amp; &quot;, &quot; &amp; num2 &amp; &quot; e &quot; &amp; num3" newline="True"/>
+            <output expression="&quot;N&#250;meros pares: &quot; &amp; totalpares" newline="True"/>
+            <output expression="&quot;N&#250;meros &#237;mpares: &quot; &amp; totalimpares" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
